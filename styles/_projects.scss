@@ -1,0 +1,30 @@
+.projects {
+    width: 90%;
+    margin: auto;
+    min-height: 90vh;
+    @include flex(space-between, center, row);
+    text-align: center;
+    flex-wrap: wrap;
+
+    padding: 10rem 0;
+}
+.project-card {
+    flex: 1 1 40rem;
+    margin-bottom: 8rem;
+    @include flex(center, center, column);
+
+    &__heading {
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 716px) {
+    .project-card {
+    flex: 1 1 60rem;
+
+
+        &__image {
+            width: 100%;
+        }
+    }
+}

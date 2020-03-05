@@ -1,0 +1,15 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.4rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #FA6F20, #ccb21d);
+$bg-color: #FA6F20;
+$grey-text: #2c2c2c;
+
+@mixin flex($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

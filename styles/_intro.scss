@@ -1,0 +1,111 @@
+.intro {
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    @include flex(space-between, center, row);
+
+    &__heading2 {
+        font-size: 8rem;
+        padding-top: 2rem;
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__heading3 {
+        font-size: 5rem;
+        padding: 2rem 0;
+    }
+
+    &__text {
+        padding-top: 2rem;
+        color: $grey-text;
+    }
+
+    &__social {
+        margin-top: 4rem;
+    }
+
+    &__social-link {
+        margin-right: 2rem;
+    }
+
+    &__images {
+        text-align: right;
+    }
+}
+
+.splash {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.intro__text,
+.intro__images {
+    flex: 1 1 40rem;
+}
+
+#plant_left {
+    animation: plant1 2s ease-in-out alternate-reverse infinite;
+}
+
+#plant_right {
+    animation: plant1 2s ease-in-out .5s alternate-reverse infinite;
+}
+
+#me_2 {
+    transform-origin: bottom;
+    animation: me 1s ease-in-out alternate-reverse infinite;
+}
+
+#clock_arrow {
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation: clock 2s infinite linear;
+}
+
+
+@media screen and (max-width: 1070px) {
+    .splash {
+        display: none;
+    }
+
+    .intro {
+        &__images {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 716px) {
+    .intro {
+        width: 100%;
+
+        &__text {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        &__images {
+            padding: 15px;
+        }
+
+        &__social {
+            width: 100%;
+        }
+
+        &__social-link {
+            margin: 2rem;
+        }
+    }
+}
+
